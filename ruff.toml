@@ -1,0 +1,39 @@
+# Enable formatters like Black compatibility (if Black is used in your project)
+line-length = 80
+
+# Target Python version for compatibility checks
+target-version = "py313"
+
+[format]
+preview = true
+# Like Black, use double quotes for strings.
+quote-style = "double"
+# Select the linting rules you want to enable. These are examples:
+# A collection of useful checks, e.g., PEP8 checks and common style issues.
+
+[lint]
+select = [
+    "D",   # docstrings (pydocstyle)
+    "E",   # Errors, PEP8 violations
+    "F",   # Pyflakes error codes (undefined names, etc.)
+    "I",   # Import sorting violations
+    "B",   # flake8-bugbear rules (catch likely bugs)
+    "S",   # Security issues (bandit rules)
+    "W",   # Warnings, PEP8 recommendations
+    "PL",  # Como o F, também procura por erros em relação a boas práticas de código
+    "PT",  # Checagem de boas práticas do Pytest
+    "ANN", # Annotations for function arguments and return types
+    "COM", # Comment formatting
+    "RUF", # Ruff-specific rules
+    "UP",  # Pyupgrade rules (upgrade syntax for newer Python versions)
+]
+
+# Ignore specific warnings/errors (for flexibility on certain issues)
+ignore = [
+    "D203", # 1 blank line required before class docstring
+    "D212", # Multi-line docstring summary should start at the second line
+    "S101", # Use of assert detected
+    "D104", # Missing docstring in public package
+    "D100", # Missing docstring in public module
+    "S301", # Use of insecure MD2, MD4, MD5, or SHA1 hash functionexecute
+]
